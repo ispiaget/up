@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content=
+        "width=device-width, initial-scale=1.0">
+    <title>
+        Contruir um formulario de inqueritos HTML and CSS
+    </title>
+ 
+    <style>
+ 
+        /* Styling the Body element i.e. Color,
+        Font, Alignment */
+        body {
+            background-color: #dedede;
+            font-family: Verdana;
+            text-align: center;
+        }
+ 
+        /* Styling the Form (Color, Padding, Shadow) */
+        form {
+            background-color: #fff;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px 20px;
+            box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+ 
+        /* Styling form-control Class */
+        .form-control {
+            text-align: left;
+            margin-bottom: 25px;
+        }
+ 
+        /* Styling form-control Label */
+        .form-control label {
+            display: block;
+            margin-bottom: 10px;
+        }
+ 
+        /* Styling form-control input,
+        select, textarea */
+        .form-control input,
+        .form-control select,
+        .form-control textarea {
+            border: 1px solid #777;
+            border-radius: 1px;
+            font-family: inherit;
+            padding: 10px;
+            display: block;
+            width: 95%;
+    
+        }
+       
+        .form-control textarea:focus{
+            border-radius: 9px;
+
+        }
+        .form-control select:focus{
+            border-radius: 9px;   
+        }
+        .form-control input:focus{
+            border-radius: 9px;  
+        }
+
+        /* Styling form-control Radio
+        button and Checkbox */
+        .form-control input[type="radio"],
+        .form-control input[type="checkbox"] {
+            display: inline-block;
+            width: auto;
+        }
+ 
+        /* Styling Button */
+        button {
+          /*  background-color: #05c46b;
+            border: 1px solid #777;
+            border-radius: 31rem;
+            font-family: inherit;
+            font-size: 21px;
+            display: block;
+            width: 100%;
+            margin-top: 30px;
+            margin-bottom: 10px;*/
+                        padding: 15px;
+                        cursor: pointer;
+                        font-size: 16px;
+                        background:rgb(233, 189, 46);
+                        border: 2px solid #d5f5d5;
+                        color: #800;
+                        transition: all 1s;
+                        margin-bottom: 5px;         
+
+      
+        }
+            button:hover{
+                background: #800;
+                color: #fff;
+                border-radius: 16px;
+
+            }
+
+
+		h1 {
+color: #800;
+font-family: arial, sans-serif;
+font-size: 32px;
+font-weight: bold;
+margin-top: 0px;
+margin-bottom: 1px;
+}
+
+    </style>
+</head>
+  
+<body>
+    <h1>Inquerito Piaget de Benguela</h1>
+  
+    <!-- Create Form -->
+
+	 <form id="form" action="mail.php" method="post">
+ 
+        <!-- Details -->
+        <div class="form-control">
+            <label for="nome" id="label-name" required>
+                Nome
+            </label>
+ 
+            <!-- Input Type Text -->
+            <input type="text"
+                   id="nome"
+                   placeholder="nome completo" />
+        </div>
+  
+        <div class="form-control">
+            <label for="email" id="label-email" required>
+                E-mail
+            </label>
+ 
+            <!-- Input Type Email-->
+            <input type="email"
+                   id="email"
+                   placeholder="seu e-mail" />
+        </div>
+  
+        <div class="form-control">
+            <label for="idade" id="label-age">
+                Idade
+            </label>
+ 
+            <!-- Input Type Text -->
+            <input type="text"
+                   id="idade"
+                   placeholder="sua idade" />
+        </div>
+  
+        <div class="form-control">
+            <label for="Genero" id="label-role">
+                Genero
+            </label>
+             
+            <!-- Dropdown options -->
+            <select name="Genero" id="Genero">
+                <option value="masculino">Masculino</option>
+                <option value="femenito">Femenio</option>
+                
+            </select>
+        </div>
+  
+        <div class="form-control">
+            <label>
+                Que assunto tens a enviar?
+            </label>
+ 
+            <!-- Input Type Radio Button -->
+            <label for="recommed-1">
+                <input type="radio"
+                       id="recommed-1"
+                       name="recomendar">Reclamaões</input>
+            </label>
+            <label for="recommed-2">
+                <input type="radio"
+                       id="recommed-2"
+                       name="recomendar">Sugestões</input>
+            </label>
+            <label for="recommed-3">
+                <input type="radio"
+                       id="recommed-3"
+                       name="recomendar">Outros</input>
+            </label>
+        </div>
+  
+        <div class="form-control">
+            <label>Selecione o Sector
+                <small>(Selecione tudo)</small>
+            </label>
+            <!-- Input Type Checkbox -->
+            <label for="inp-1">
+                <input type="checkbox"
+                       name="inp">Contabilidade</input></label>
+            <label for="inp-2">
+                <input type="checkbox"
+                       name="inp">Divisão Tecnológica</input></label>
+            <label for="inp-3">
+                <input type="checkbox"
+                       name="inp">Gabinete de Comunicação e Imagem</input></label>
+            <label for="inp-4">
+                <input type="checkbox"
+                       name="inp">GAS</input></label>
+            <label for="inp-5">
+                <input type="checkbox"
+                       name="inp">Recursos Humanos</input></label>
+            <label for="inp-6">
+                <input type="checkbox"
+                       name="inp">Secretaria</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="inp">Secretariado Académico</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="inp">Secretariado dos departamentos</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="inp">Secretariado dos Mestrados</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="inp">Tesouraria</input></label>
+        </div>
+  
+        <div class="form-control">
+            <label for="mensagem">
+                Comentários ou sugestões
+            </label>
+ 
+            <!-- multi-line text input control -->
+            <textarea name="mensagem" id="mensagem"
+                placeholder="Comenta aqui">
+            </textarea>
+        </div>
+  
+        <!-- Multi-line Text Input Control -->
+        <button type="submit">Enviar</button>
+           <!--Enviar--> 
+			<!--<input type="hidden" name="accessKey" value=" b0b88754-282a-4e10-b48d-77c0653268b0">
+			<input type="hidden" name="obrigado" value="https://inquerito-p.netlify.app/obrigado">-->
+    
+    </form>
+</body>
+  
+</html>
